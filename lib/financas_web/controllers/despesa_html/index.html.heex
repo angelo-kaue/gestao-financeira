@@ -1,0 +1,101 @@
+<div class="container">
+  <header>
+    <h1>Despesas</h1>
+    <p>Controle seus gastos com facilidade e precisão.</p>
+  </header>
+
+  <main>
+    <div class="actions">
+      <a href="/despesas/new" class="btn">Nova Despesa</a>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Data</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for despesa <- @despesas do %>
+          <tr>
+            <td><%= despesa.descricao %></td>
+            <td>R$ <%= despesa.valor %></td>
+            <td><%= despesa.data %></td>
+            <td>
+              <a href={"/despesas/#{despesa.id}/edit"} class="btn-action">Editar</a>
+              <a href={"/despesas/#{despesa.id}"} data-method="delete" class="btn-action btn-danger">Excluir</a>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 - Sistema de Gestão Financeira. Todos os direitos reservados.</p>
+  </footer>
+</div>
+<style>
+  /* Reutilizando estilos da página inicial */
+  @import url("/css/base.css");
+
+  .actions {
+    margin: 20px 0;
+    text-align: right;
+  }
+
+  .btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .btn:hover {
+    background-color: #2e7d32;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  .table th,
+  .table td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .table th {
+    background-color: #f4f6f8;
+    color: #333;
+  }
+
+  .btn-action {
+    margin-right: 10px;
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .btn-action:hover {
+    text-decoration: underline;
+  }
+
+  .btn-danger {
+    color: #f44336;
+  }
+
+  .btn-danger:hover {
+    text-decoration: underline;
+  }
+</style>

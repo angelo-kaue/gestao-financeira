@@ -1,0 +1,111 @@
+<div class="container">
+  <header>
+    <h1>Sistema de Gestão Financeira</h1>
+    <p>Organize suas finanças de forma prática e eficiente.</p>
+  </header>
+
+  <main>
+    <div class="menu">
+      <a href="/receitas" class="card">
+        <h2>Receitas</h2>
+        <p>Gerencie suas fontes de renda.</p>
+      </a>
+      <a href="/despesas" class="card">
+        <h2>Despesas</h2>
+        <p>Controle seus gastos com facilidade.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 - Sistema de Gestão Financeira. Todos os direitos reservados.</p>
+  </footer>
+</div>
+
+<style>
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(90deg, #4caf50, #2e7d32);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 1.2rem;
+  }
+
+  main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+
+  .card {
+    text-decoration: none;
+    color: #333;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #4caf50;
+  }
+
+  .card p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #2e7d32;
+    color: white;
+    font-size: 0.9rem;
+  }
+</style>
